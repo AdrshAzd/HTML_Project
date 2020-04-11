@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<h1><center></center></h1></head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+   background-color: black;
+ 
+}
+/* Style the header */
+header {
+ background-color: white;
+   padding: 1px;
+  text-align: center;
+  font-size: 35px;
+  color: Red ;
+  font-family: cursive;
+  height: 300px;
+  background-color: white; 
+  /*background-image: url('p1.jpeg');
+  background-repeat:rounds; */
+
+  }
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 1300px; /* only for demonstration, should be removed */
+  background-image: url('p1.jpeg');
+  background-size: cover;
+  padding: 20px;
+  font-family: Comic Sans MS;
+}
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+article {
+  float: left;
+  width: 80%;
+  background-image: url('p1.jpeg');
+  background-repeat: round;
+ height: 1300px; /* only for demonstration, should be removed */
+
+}
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the footer */
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white ;
+  height: 500px;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 50%;
+    height: auto;
+  }
+}
+h6.p1
+{
+	font-size: 30px;
+	font-family: Bradley Hand ITC;
+}
+h4
+{
+	font-size: 15px;
+	font-family: Comic Sans MS;
+	font-weight: bold;
+}
+th,td
+{	border: 2px solid black;
+     padding-right: 50px;
+  padding-left: 50px;
+}
+table{
+	width:50%;
+	border-collapse: collapse;
+	border: 2px solid black;
+	height: 2s0px;
+	background-color: white;
+	
+}
+tr:hover
+{
+	background-color: orange;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 50%;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  
+
+</style>
+</head>
+<body>
+<header>
+ <img src="logo.png" height="300" width="500" align="center">
+ </header>
+ <hr style="border: 10px solid black ; direction: ltr;">
+<section>
+  <nav>
+  	<marquee><font color="white" style=" font-size: 20px; font-weight: bold;">Click Below to Get more</font></marquee>
+    <div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:100px">
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'London')">Women's Fashion</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Paris')"> Men's Fashion</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Tokyo')">Beauty & Health</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'home')">Home & Decors</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'kitchen')">Kitchen Wares</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'skin')">Skin Care Products</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'utensils')">Freedom Utensils</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'sports')">Sports:live the life</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'ele')">Freedom Electronics</button><button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'phone')">Freedom Phones</button>
+<button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'ear')">Freedom Headphones</button></div>
+
+<div style="margin-left:130px">
+  <div class="w3-padding"></div>
+
+  <div id="London" class="w3-container city" style="display:none">
+  	<font style=" font-size: 20px; font-weight: bold;">
+     
+  <button>  <p>Designer Boutique</p>
+    <p>Footwear</p>
+    <p>Sunglasses</p>
+    <p>Traditional Wear</p>
+    <p>Western Wear</p>
+    <p>Sneakers</p>
+    <p>Bracelet's</p>
+    <p>Peeps</p>
+    <p>Peepoes</p>
+    <p>Styling Devices</p></button>
+  </div>
+
+  <div id="Paris" class="w3-container city" style="display:none">
+   <button> <p>Kurta</p>
+    <p> Shirts</p>
+    <p>T-Shirt</p>
+    <p>Belt</p>
+    <p>Oil</p>
+    <p>Wallet</p> 
+    <p>Grooming Devices</p> 
+    <p>Perfume</p></button>
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+  <button>	<p>Face Primer</p>
+    <p> Foundation</p>
+    <p>BB-Cream</p>
+    <p>Concealer</p>
+    <p>Blush</p>
+    <p>Highlighter</p> 
+    <p>Bronzer</p> 
+    <p>Perfume</p>
+    <p>Brushes</p>
+    <p> Lipstick</p>
+    <p>Lip Gloss</p>
+    <p>Eye-liner</p>
+    <p>Mascara</p>
+    <p>Kajal</p> 
+    <p>Eye Primer</p> 
+    <p>Spray</p>
+    <p>Powder</p>
+    <p>Makeup Kit</p>
+    <p>Makeup Storage Containers</p>
+    <p>Eye Shadow</p></button>
+    
+
+  </div>
+  <div id="home" class="w3-container city" style="display:none">
+  <button>	<p>Furniture</p>
+    <p> Home improvement</p>
+    <p>Clocks</p>
+    <p>Paintings</p>
+    <p>Photo Frames</p>
+    <p>Candles</p> 
+    <p>Idols</p> 
+    <p>Coasters</p>
+    <p>Artificial Flora</p>
+    <p> Ashtrays</p>
+    <p>T-Shirt</p>
+    <p>Candle Holders</p>
+    <p>Oil</p>
+    <p>Decorative Stickers</p> 
+    <p>Home Fragrance</p> 
+    <p>Magnets</p></button>
+    
+ 
+  </div>
+  <div id="kitchen" class="w3-container city" style="display:none">
+ <button> 	<p>Gas</p>
+    <p> Stoves</p>
+    <p>Jars</p>
+    <p>Containers</p>
+    <p>Thermos</p>
+    <p>Flasks</p> 
+    <p>Pressure Cookers</p> 
+    <p>Frying Pan</p>
+    <p>Tawas</p>
+    <p>Induction Cookers</p>
+    <p> Mixer Grinder</p>
+    <p>Coffee Maker</p>
+    <p>Oven</p>  </button>  
+  </div>
+  <div id="skin" class="w3-container city" style="display:none">
+  <button>	<p>Facepack</p>
+    <p> Facewash</p>
+    <p>Scrub</p>
+    <p>Exfoliator</p>
+    <p>Face Oil</p>
+    <p>Face Serum</p> 
+    <p>Toner</p> 
+    <p>Moisturizer</p>
+    <p>Sunscreen Cream</p>
+    <p> Eye Cream</p>
+    <p>Night Cream</p>
+    <p>Day Cream</p>
+    <p>Hand cream</p>
+    <p>SkinCeuticals</p> 
+    <p>Eminence Oragnic</p> </button>
+    
+  </div>
+  <div id="utensils" class="w3-container city" style="display:none">
+  <button>	<p>Vegetable Peeler</p>
+    <p> Knife</p>
+    <p>Grater</p>
+    <p>Sieve</p>
+    <p>Spatula</p>
+    <p>Frying Pan's</p> 
+    <p>Ladle</p> 
+    <p>Tea Towels</p></button>
+    </div>
+  <div id="sports" class="w3-container city" style="display:none">
+  <button>	<p>Cricket Kit</p>
+    <p> Football</p>
+    <p>Bat</p>
+    <p>Ball</p>
+    <p>Clubs</p>
+    <p>Stumps</p> 
+    <p>Taekwondo Chains</p> 
+    <p>Dumbles</p></button>
+    </div>
+    <div id="ele" class="w3-container city" style="display:none">
+  	<button><p>Washing Machine</p>
+    <p> Air Conditioner</p>
+    <p>Led</p>
+    <p>Fan</p>
+    <p>Cooler</p>
+    <p>Charger</p> 
+    <p>Lights</p> 
+    <p>Mcb</p>
+    <p>Lcd</p>
+    <p>Refrigerator</p>
+    <p>Freezer</p>
+    <p>Juicer</p>
+    <p>Mixer-Grinder</p>
+    <p>Toaster</p> 
+    <p>Aqua Guard</p> 
+    <p>Sound-Bar</p></button>
+    
+    </div>
+    <div id="phone" class="w3-container city" style="display:none">
+  <button> <p>Redmi </p>
+    <p>Oppo</p> 
+    <p>Realme</p> 
+    <p>Samsung</p>
+    <p>Vivo</p>
+    <p>Apple</p>
+    <p> Oneplus</p>
+    <p>Honor</p>
+    <p>Headphones</p>
+    <p>Panasonic</p>
+    <p>HTC</p>
+    <p>MetroPcs</p>
+    <p>Nokia</p>
+    <p>Charger</p> 
+    <p>Earphones</p> 
+    <p>PowerBank</p>
+    <p>C-Type</p>
+    <p>One in only Charger</p>
+    <p>Small phones</p>
+    <p>Connectors</p></button>
+     </div>
+  <div id="ear" class="w3-container city" style="display:none">
+  <button>	<p>Boat</p>
+    <p> JBL</p>
+    <p>Bluetooth</p>
+    <p>Wireless headphone</p>
+    <p>Wireless Earphones</p>
+    <p>Wireless  Bluetooth</p> 
+    <p>Wired Headphones</p> 
+    <p>Under 200 Earphones</p>
+    <p>Earpodes</p>
+    <p> Mini Sound Bar</p></button>
+   </div>
+</font>
+  </div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+  </nav>
+  
+  <article>
+      <div class="container"> 
+       <div class="row"> 
+            <div class="column"> 
+                  <a href="new 1.html">  <img src=  "cook.png" alt="" 
+                         style="width:100%;margin-left: 5px;"> </a>
+                         <table style=" margin-left: 50px; margin-top:5px; height:10px; ">
+                         	<tr><td>
+                         		<h4> <a href="C:\Users\Dell\Desktop\new 1.html">Container </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs. 399/-</p>
+                         	</td></tr>
+                         </table>
+                        <a href="bed.html"> <img src=  "bed.png"
+                         style="width:100%;margin-top: 5px;margin-left: 5px;"> </a>
+                         <table style=" margin-left: 45px;margin-top:5px; ">
+                         	<tr><td>
+                         		<h4><a href="bed.html">California Kings's Bed </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs.10,999/-</p>
+                         	</td></tr>
+                         </table>
+                     <a href="boxx.html">  <img src=  "box.png"
+                         style="width:100% ;margin-top: 2px;margin-left: 5px;"> </a>
+                         <table style="margin-left: 45px;margin-top:5px">
+                         	<tr><td> 
+                         		<h4> <a href="boxx.html">Stylish Box </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs.499/-</p>
+                         	</td></tr>
+                         </table>
+                     </div> 
+                     <div class="column"> 
+                 <a href="nivea.html">   <img src=  "skin.jpg"
+                         style="width:100%;margin-left: 5px; "> </a>
+                         <table style="margin-left: 60px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4> <a href="nivea.html">Nivea</a>  </h4></td></tr>
+                         	<tr><td> <p>Price: Rs. 549/-</p>
+                         	</td></tr>
+                         </table>
+                        <a href="spoon.html"> <img src=  "utensils.jpg"
+                         style="width:100%;margin-top: 5px;margin-left: 5px;"> </a>
+                         <table style="margin-left: 60px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4> <a href="spoon.html">Utensil's Set </a> </h4></td></tr>
+                         	<tr><td> <p>Price: Rs.699/-</p>
+                         	</td></tr>
+                         </table>
+                      <a href="fro.html"> <img src=  "frock.jpg"
+                         style="width:100%;margin-top: 5px;margin-left: 5px;"> </a>
+                         <table style="margin-left: 60px;margin-top: 5px; ">
+                         	<tr><td>
+                         		<h4><a href="fro.html">Frock </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs.999/-</p>
+                         	</td></tr>
+                         </table>
+                     </div> 
+                     <div class="column"> 
+                  <a href="sw.html">  <img src=  "tshirt.jpg"
+                         style="width:100%;margin-left: 5px;"> </a>
+                         <table style="margin-left: 50px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4><a href="sw.html">Sweater </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs. 499/-</p>
+                         	</td></tr>
+                         </table>
+                       <a href="soo.html">  <img src=  "sofa.jpg"
+                         style="width:100%;margin-top: 5px;margin-left: 5px;"> </a>
+                         <table style="margin-left: 50px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4><a href="soo.html">Designer Sofa </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs.2999/-</p>
+                         	</td></tr>
+                         </table>
+                      <a href="leh.html"> <img src=  "lehnga.jpg"
+                         style="width:100%;margin-top: 5px;margin-left: 5px;"> </a>
+                         <table style="margin-left: 30px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4><a href="leh.html">Traditional Lehenga</a></h4></td></tr>
+                         	<tr><td> <p>Price: Rs.3999/-/p>
+                         	</td></tr>
+                         </table>
+                     </div> 
+                     <div class="column"> 
+                   <a href="saru.html"> <img src=  "saree.jpg"
+                         style="width:100%;margin-left: 5px;"> </a>
+                         <table style="margin-left: 50px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4><a href="saru.html">Saree </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs. 699/-</p>
+                         	</td></tr>
+                         </table>
+                       <a href="baa.html">  <img src=  "ball.jpg"
+                         style="width:100%;margin-top: 5px;margin-left: 5px;"> </a>
+                         <table style="margin-left: 50px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4><a href="baa.html">Ball Decor's </a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs.499/- </p>
+                         	</td></tr>
+                         </table>
+                      <a href="rass.html"> <img src=  "rasmy.jpeg"
+                         style="width:100%; margin-top: 5px;margin-left: 5px;"> </a>
+                         <table style="margin-left: 50px;margin-top: 2px; ">
+                         	<tr><td>
+                         		<h4><a href="rass.html">Rasmy</a></h4></td></tr>
+                         	<tr><td> <p> Price: Rs.599/- </p>
+                         	</td></tr>
+                         </table>
+                     </div> <marquee  height="100" ><h1><font style="font-size: 40px;font-weight: bolder;font-family: Bradley Hand ITC;margin-top: 30px; 
+                     background-color: white;"> Sale! Hurry Up</font> </h1></marquee>
+                       </article>
+</section>
+<footer>
+	<font style="font-size: 40px;margin-top: 70px"> <u>About us </u></font><br>
+	<font style=" font-size:  15px"><div class="container">
+		<div class="row">
+			<div class="column">
+				<img src="Pavan.jpg" style="width: 70%;margin-top: 70px">
+<p style="font-size: 18px;">Pavan Bolle</p>
+</div>
+				<div class="column">
+					<img src="saumya.jpg"  style="width: 70%;margin-top: 70px">	
+								<p style="font-size: 18px;">Saumya Srivastava</p>
+					</div>
+					<div class="column">
+					<img src="Adarsh.jpg" style="width: 70%;margin-top: 70px" >	
+					<p style="font-size: 18px;">Adarsh Azad</p>			
+					</div>
+					<div class="column">
+					<img src="bram.jpg"  style="width: 70%;margin-top: 70px">			
+					<p style="font-size: 18px;">Vunnam Bramham</p>		
+					</div>
+					</div>
+					
+						<font style="font-size: 25px;"><p style="margin-top:100px;"><u>Address:</u>
+						441\30, Sector-I
+						<p>Near US Post-Book Depot </p>
+						<p style="font-size: 18px;"><u>Zip-Code:</u> 229001</p>
+						<p style="font-size: 18px;">California,US</p>
+						<p style="font-size: 18px;">
+							<p style="font-size: 18px;"> <u>Contact us </u></p>
+
+						 <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">saumyasanjay08@gmail.com</a></p>
+						<p style="font-size: 18px;"> <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">9554371958a@gmail.com</a></p></font>
+						<font style="margin-top:20px;font-size: 20px">All copyrights are Reserved</font>
+						<p><img src="C:\Users\Dell\Desktop\co.jpg" style="width:5%;">				
+						
+					
+</footer>
+</body>
+</html>
